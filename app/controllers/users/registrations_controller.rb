@@ -45,7 +45,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:sign_up, keys: [
                                                         :first_name, 
                                                         :last_name, 
-                                                        :role
+                                                        :role,
+                                                        :photo
                                                       ])
   end
 
@@ -54,7 +55,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:account_update, keys: [
                                                               :first_name, 
                                                               :last_name, 
-                                                              :role
+                                                              :role,
+                                                              :photo
                                                             ])
   end
 
